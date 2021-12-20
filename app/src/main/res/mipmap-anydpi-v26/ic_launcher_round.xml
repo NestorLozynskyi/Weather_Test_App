@@ -1,0 +1,7 @@
+package com.casino.x777.slots.ui.screens.offers
+
+import com.casino.x777.slots.R
+import com.casino.x777.slots.base.BaseFragment
+import com.casino.x777.slots.ui.adapters.OffersAdapter
+import com.casino.x777.slots.ui.screens.webview.WebView
+import kotlinx.android.synthetic

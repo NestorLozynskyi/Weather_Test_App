@@ -1,0 +1,94 @@
+package com.casino.x777.slots.utils.preferences
+
+import android.content.SharedPreferences
+import com.casino.x777.slots.data.constants.Constants
+import com.casino.x777.slots.data.objects.ObjectAuth
+import com.casino.x777.slots.data.objects.Config
+import com.google.gson.Gson
+import com.casino.x777.slots.utils.preferences.PreferenceHelper.set
+
+class SharedManager(private val preferences: SharedPreferences, private val gson: Gson) {
+
+    companion object {
+        private const val CONFIG = "CONFIG"
+        private const val AUTH_SCREEN_CODE_CONFIG = "AUTH_SCREEN_CODE_CONFIG"
+        private const val APPS_ID = "APPS_ID"
+        private const val ADV_ID = "ADV_ID"
+        private const val OS_ID = "OS_ID"
+        private const val PHONE = "PHONE"
+        private const val COUNTRY_CODE = "COUNTRY_CODE"
+        private const val NAME = "NAME"
+        private const val SIZE_X = "SIZE_X"
+        private const val BALANCE = "BALANCE"
+        private const val ACCESS = "ACCESS_BOOLEAN"
+        private const val LOGIN = "LOGIN"
+    }
+
+    var config: Config?
+        get() {
+            val json = preferences.getString(CONFIG, "")
+            return if (json == "") null
+            else gson.fromJson(json, Config::class.java)
+
+        }
+        set(value) {
+            preferences[CONFIG] = gson.toJson(value)
+        }
+
+    var authScreenCodeConfig: ObjectAuth?
+        get() {
+            val json = preferences.getString(AUTH_SCREEN_CODE_CONFIG, "")
+            return if (json == "") null
+            else gson.fromJson(json, ObjectAuth::class.java)
+
+        }
+        set(value) {
+            preferences[AUTH_SCREEN_CODE_CONFIG] = gson.toJson(value)
+        }
+
+    var appsId: String?
+        get() = preferences.getString(APPS_ID, "")
+        set(value) {
+            preferences[APPS_ID] = value
+        }
+
+    var advId: String?
+        get() = preferences.getString(ADV_ID, "")
+        set(value) {
+            preferences[ADV_ID] = value
+        }
+
+    var osId: String?
+        get() = preferences.getString(OS_ID, "")
+        set(value) {
+            preferences[OS_ID] = value
+        }
+
+    var phone: String?
+        get() = preferences.getString(PHONE, "")
+        set(value) {
+            preferences[PHONE] = value
+        }
+
+    var countryCode: Int?
+        get() = preferences.getInt(COUNTRY_CODE, -1)
+        set(value) {
+            preferences[COUNTRY_CODE] = value
+        }
+
+    var name: String?
+        get() = preferences.getString(NAME, "")
+        set(value) {
+            preferences[NAME] = value
+        }
+
+    var sizeX: Int
+        get() = preferences.getInt(SIZE_X, 0)
+        set(value) {
+            preferences[SIZE_X] = value
+        }
+
+    var balance: Int
+        get(){
+            val i = preferences.getInt(BALANCE, 0)
+            retu
