@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">ru</string>
+    <string name="country">def</string>
+
+    <string name="app_name">Погода</string>
+    <string name="back_again">Нажмите еще раз, чтобы выйти</string>
+
+    <string name="profile_city">Выберите свой город</string>
+    <string name="profile_theme">Выберите тему</string>
+    <string name="profile_enter_city">Введите город</string>
+</resources>

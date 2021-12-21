@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">uk</string>
+    <string name="country">def</string>
+
+    <string name="app_name">Погода</string>
+    <string name="back_again">Натисніть ще раз, щоб вийти</string>
+
+    <string name="profile_city">Оберіть своє місто</string>
+    <string name="profile_theme">Оберіть тему</string>
+    <string name="profile_enter_city">Введіть місто</string>
+</resources>

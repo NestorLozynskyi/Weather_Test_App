@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">pl</string>
+    <string name="country">def</string>
+
+    <string name="app_name">Pogoda</string>
+    <string name="back_again">Kliknij ponownie, aby wyjść</string>
+
+    <string name="profile_city">Wybierz swoje miasto</string>
+    <string name="profile_theme">Wybierz temat</string>
+    <string name="profile_enter_city">Napisz miasto</string>
+</resources>

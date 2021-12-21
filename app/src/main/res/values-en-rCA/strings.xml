@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="language">def</string>
-    <string name="country">def</string>
+    <string name="language">en</string>
+    <string name="country">ca</string>
 
-    <string name="app_name">Weather (Test App)</string>
+    <string name="app_name">Weather</string>
     <string name="back_again">Click again to exit</string>
 
     <string name="profile_city">Choose your city</string>

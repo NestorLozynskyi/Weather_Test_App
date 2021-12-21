@@ -27,7 +27,7 @@
 
     <action
         android:id="@+id/onCreate"
-        app:destination="@id/searchFragment"
+        app:destination="@id/profileFragment"
         app:launchSingleTop="true"
         app:popUpTo="@id/main_navigation"
         app:popUpToInclusive="true" />

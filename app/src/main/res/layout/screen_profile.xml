@@ -7,17 +7,18 @@
     android:background="@color/white">
 
     <TextView
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="37dp"
-        android:layout_marginStart="56dp"
         android:layout_marginTop="36dp"
-        android:text="Оберіть своє місто"
+        android:text="@string/profile_city"
         android:textSize="25sp"
         android:textStyle="italic|bold"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/theme_white"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginStart="92dp"
@@ -27,6 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/theme_black"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginTop="304dp"
@@ -36,22 +38,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="148dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginStart="128dp"
         android:layout_marginTop="208dp"
-        android:text="Оберіть тему"
+        android:text="@string/profile_theme"
         android:textSize="25sp"
         android:textStyle="italic|bold"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/etEnterCity"
         android:layout_width="232dp"
         android:layout_height="46dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="120dp"
-        android:hint="Введіть місто"
+        android:hint="@string/profile_enter_city"
         android:inputType="text"
         android:textSize="25sp"
         android:textStyle="italic|bold"
@@ -59,11 +62,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/find"
         android:layout_width="52dp"
         android:layout_height="61dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="1dp"
         android:src="@drawable/ic_baseline_search_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/etEnterCity"
+        app:layout_constraintTop_toTopOf="@id/etEnterCity" />
 </androidx.constraintlayout.widget.ConstraintLayout>
