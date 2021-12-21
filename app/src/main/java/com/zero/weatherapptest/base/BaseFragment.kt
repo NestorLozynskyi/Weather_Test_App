@@ -4,12 +4,21 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 
 abstract class BaseFragment(@LayoutRes val layoutId: Int) : Fragment(layoutId) {
 
     abstract val navigator: BaseNavigator
 
+    var navController: NavController? = null
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        super.onViewCreated(view, savedInstanceState)
+
+        navController = Navigation.findNavController(view)
+
         initialize()
         setFocus(view)
         observe()

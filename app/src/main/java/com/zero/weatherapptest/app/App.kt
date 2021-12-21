@@ -1,6 +1,7 @@
 package com.zero.weatherapptest.app
 
 import android.app.Application
+import com.zero.weatherapptest.di.koin.navigationModule
 import com.zero.weatherapptest.di.koin.networkModule
 import com.zero.weatherapptest.di.koin.sharedPrefModule
 import com.zero.weatherapptest.di.koin.viewModelModule
@@ -29,7 +30,8 @@ class App : Application() {
                 listOf(
                     viewModelModule,
                     networkModule,
-                    sharedPrefModule
+                    sharedPrefModule,
+                    navigationModule
                 )
             )
         }
