@@ -11,6 +11,8 @@ abstract class BaseFragment(@LayoutRes val layoutId: Int) : Fragment(layoutId) {
 
     abstract val navigator: BaseNavigator
 
+    abstract val viewModel: BaseViewModel
+
     var navController: NavController? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

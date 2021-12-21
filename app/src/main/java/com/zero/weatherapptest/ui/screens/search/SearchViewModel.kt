@@ -1,4 +1,6 @@
 package com.zero.weatherapptest.ui.screens.search
 
-class SearchViewModel {
+import com.zero.weatherapptest.base.BaseViewModel
+
+class SearchViewModel: BaseViewModel() {
 }

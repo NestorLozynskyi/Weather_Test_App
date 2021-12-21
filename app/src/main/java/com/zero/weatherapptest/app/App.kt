@@ -1,10 +1,7 @@
 package com.zero.weatherapptest.app
 
 import android.app.Application
-import com.zero.weatherapptest.di.koin.navigationModule
-import com.zero.weatherapptest.di.koin.networkModule
-import com.zero.weatherapptest.di.koin.sharedPrefModule
-import com.zero.weatherapptest.di.koin.viewModelModule
+import com.zero.weatherapptest.di.koin.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -31,7 +28,8 @@ class App : Application() {
                     viewModelModule,
                     networkModule,
                     sharedPrefModule,
-                    navigationModule
+                    navigationModule,
+                    repositoryModule
                 )
             )
         }
