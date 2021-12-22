@@ -17,15 +17,6 @@ val viewModelModule = module {
     viewModel { SearchViewModel() }
 }
 
-val navigationModule = module {
-    factory { ProfileNavigation() }
-    factory { SearchNavigation() }
-    factory { StatisticNavigation() }
-}
-val repositoryModule = module {
-    factory { ProfileRepository(get()) }
-}
-
 val networkModule = module {
 
     fun provideGson() = GsonBuilder()
@@ -41,4 +32,14 @@ val sharedPrefModule = module {
     factory { PrefHelper.customPrefs(get(), "wta") }
 
     factory { SharedManager(get(), get()) }
+}
+
+val navigationModule = module {
+    factory { ProfileNavigation() }
+    factory { SearchNavigation() }
+    factory { StatisticNavigation() }
+}
+
+val repositoryModule = module {
+    factory { ProfileRepository(get()) }
 }

@@ -14,11 +14,11 @@ class ProfileViewModel(
     private var getCityJob: Job? = null
 
     fun getProfile() {
-       /* getCityJob = launch(::onErrorHandler) {
-            withContext(Dispatchers.Main){/*onStartProgress.value = Unit*/}
-            ldCity.postValue(repository.getCity())
-            withContext(Dispatchers.Main){/*onEndProgress.value = Unit*/}
-        }*/
+         getCityJob = launch(::onErrorHandler) {
+             withContext(Dispatchers.Main){/*onStartProgress.value = Unit*/}
+             ldCity.postValue(repository.getCity())
+             withContext(Dispatchers.Main){/*onEndProgress.value = Unit*/}
+         }
     }
 
     override fun onErrorHandler(throwable: Throwable) {

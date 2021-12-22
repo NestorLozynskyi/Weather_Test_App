@@ -2,11 +2,8 @@ package com.zero.weatherapptest.base.baseExtensions
 
 import android.os.Handler
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.ViewModelProviders
 import com.zero.weatherapptest.R
-import com.zero.weatherapptest.base.BaseFragment
 
 fun FragmentActivity.finishFragment() {
     supportFragmentManager.popBackStack()

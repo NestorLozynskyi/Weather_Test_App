@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
-abstract class BaseFragment(@LayoutRes val layoutId: Int) : Fragment(layoutId) {
+abstract class BaseFragment(@LayoutRes val layoutId: Int? = null) : Fragment(/*layoutId*/) {
 
     abstract val navigator: BaseNavigator
 
