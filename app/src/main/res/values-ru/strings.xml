@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="language">ru</string>
+    <string name="lang">ru</string>
     <string name="country">def</string>
 
     <string name="app_name">Погода</string>
@@ -9,4 +9,22 @@
     <string name="profile_city">Выберите свой город</string>
     <string name="profile_theme">Выберите тему</string>
     <string name="profile_enter_city">Введите город</string>
+
+    <string name="city">город %s</string>
+    <string name="village">село %s</string>
+    <string name="not_a_settlement">(не населённый пункт)</string>
+    <string name="language">язык</string>
+    <string name="select_a_language">Выберите язык</string>
+
+    <string name="lang_def">(по умолчанию) русский</string>
+
+    <string name="no_data">нет данных</string>
+    <string name="absent">отсутствует</string>
+
+    <string name="history">История:</string>
+    <string name="temperature">Температура:</string>
+    <string name="pressure">Давление:</string>
+    <string name="humidity">Влажность:</string>
+    <string name="wind">Ветер:</string>
+    <string name="precipitation">Осадки:</string>
 </resources>

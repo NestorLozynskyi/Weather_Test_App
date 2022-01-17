@@ -15,16 +15,11 @@ abstract class BaseViewModel : ViewModel() {
 
     private var coroutineHelper = CoroutineHelper(viewModelScope)
 
-    /*init {
-        coroutineHelper = CoroutineHelper(viewModelScope)
-    }*/
-
     protected open fun launch(
         onError: (e: Throwable) -> Unit,
         coroutineContext: CoroutineContext = Dispatchers.IO,
         block: suspend CoroutineScope.() -> Unit
     ): Job {
-        //if(coroutineHelper == null) coroutineHelper = CoroutineHelper(viewModelScope)
         return coroutineHelper.launch(coroutineContext, block, onError)
     }
 

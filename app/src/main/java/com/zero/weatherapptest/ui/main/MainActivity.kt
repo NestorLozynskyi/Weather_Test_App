@@ -6,34 +6,20 @@ import com.zero.weatherapptest.base.BaseActivity
 import java.lang.Exception
 
 class MainActivity : BaseActivity(R.layout.activity_main) {
-    override fun onActivityCreated() {
-        startFragment()
-    }
+    override fun onActivityCreated() {}
 
     override fun backPressed(): Boolean {
-        return true
-    }
-
-    private fun startFragment() {
-        //initialFragment(Splash())
-
-      /*  Navigation.findNavController(this, R.id.navHostFragment)
-            .navigate(R.id.onCreate)*/
+        return false
     }
 
     override fun onStart() {
         super.onStart()
         try {
-
             Navigation.findNavController(this, R.id.navHostFragment)
                 .navigate(R.id.onCreate)
 
         } catch (e: Exception) {
             println(e)
         }
-    }
-
-    override fun onPause() {
-        super.onPause()
     }
 }

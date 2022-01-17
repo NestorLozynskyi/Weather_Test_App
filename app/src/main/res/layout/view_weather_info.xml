@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="12dp"
+    android:background="#66818BAF">
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Місто"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_temperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/temperature"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_temperature_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_name"/>
+
+    <TextView
+        android:id="@+id/tv_temperature_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="10 °C"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/tv_temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_name"/>
+
+    <TextView
+        android:id="@+id/tv_pressure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/pressure"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_pressure_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temperature"/>
+
+    <TextView
+        android:id="@+id/tv_pressure_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
+        android:text="Тиск, мм"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/tv_pressure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temperature" />
+
+    <TextView
+        android:id="@+id/tv_humidity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/humidity"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_humidity_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pressure"/>
+
+    <TextView
+        android:id="@+id/tv_humidity_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="Вологість,%"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/tv_humidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pressure"/>
+
+    <TextView
+        android:id="@+id/tv_wind"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/wind"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_wind_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_humidity"/>
+
+    <TextView
+        android:id="@+id/tv_wind_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="Вітер, м/сек"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/tv_wind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_humidity"/>
+
+    <TextView
+        android:id="@+id/tv_rain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/precipitation"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rain_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wind"/>
+
+    <TextView
+        android:id="@+id/tv_rain_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="Ймовірність опадів, %"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/tv_rain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wind"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

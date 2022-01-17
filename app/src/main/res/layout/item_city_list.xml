@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray"
+    android:id="@+id/parent">
+
+    <TextView
+        android:id="@+id/tv_country_code"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="UA"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_city_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_city_name"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ternopil"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_country_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_name"/>
+
+    <TextView
+        android:id="@+id/tv_region"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ternopil oblast"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line_white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_region"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

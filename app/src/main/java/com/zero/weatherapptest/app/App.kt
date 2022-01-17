@@ -26,10 +26,10 @@ class App : Application() {
             modules(
                 listOf(
                     viewModelModule,
-                    networkModule,
                     sharedPrefModule,
-                    navigationModule,
-                    repositoryModule
+                    repositoryModule,
+                    retrofitModule,
+                    dataBaseModule
                 )
             )
         }

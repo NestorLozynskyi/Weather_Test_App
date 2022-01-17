@@ -1,12 +1,9 @@
 package com.zero.weatherapptest.base.baseExtensions
 
-import android.os.Handler
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.ViewModelProviders
 import com.zero.weatherapptest.R
-import com.zero.weatherapptest.base.BaseFragment
+import java.util.*
 
 fun FragmentActivity.finishFragment() {
     supportFragmentManager.popBackStack()
@@ -19,7 +16,11 @@ fun FragmentActivity.exitVariant() {
     } else {
         Toast.makeText(this, this.getString(R.string.back_again), Toast.LENGTH_SHORT).show()
         exit = true
-        Handler().postDelayed({ exit = false }, 2000)
+        Timer().schedule(object : TimerTask() {
+            override fun run() {
+                exit = false
+            }
+        }, 2000)
     }
 }
 

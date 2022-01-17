@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="language">en</string>
+    <string name="lang">en</string>
     <string name="country">us</string>
 
     <string name="app_name">Weather</string>
     <string name="back_again">Click again to exit</string>
 
-    <string name="profile_city">Choose your city</string>
-    <string name="profile_theme">Choose a theme</string>
+    <string name="profile_city">Select your city</string>
+    <string name="profile_theme">Select a theme</string>
     <string name="profile_enter_city">Enter the city</string>
+
+    <string name="city">city %s</string>
+    <string name="village">village %s</string>
+    <string name="not_a_settlement">(not a settlement)</string>
+    <string name="language">language</string>
+    <string name="select_a_language">Select a language</string>
+
+    <string name="lang_def">(default) English</string>
+
+    <string name="no_data">no data</string>
+    <string name="absent">absent</string>
+    <string name="history">History:</string>
+    <string name="temperature">Temperature:</string>
+    <string name="pressure">Pressure:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="wind">Wind:</string>
+    <string name="precipitation">Precipitation:</string>
 </resources>

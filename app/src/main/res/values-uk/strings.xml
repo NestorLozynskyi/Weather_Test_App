@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="language">uk</string>
+    <string name="lang">uk</string>
     <string name="country">def</string>
 
     <string name="app_name">Погода</string>
@@ -9,4 +9,22 @@
     <string name="profile_city">Оберіть своє місто</string>
     <string name="profile_theme">Оберіть тему</string>
     <string name="profile_enter_city">Введіть місто</string>
+
+    <string name="city">місто %s</string>
+    <string name="village">село %s</string>
+    <string name="not_a_settlement">(не населений пункт)</string>
+    <string name="language">мова</string>
+    <string name="select_a_language">Виберіть мову</string>
+
+    <string name="lang_def">(звичайне) українська</string>
+
+    <string name="no_data">немає даних</string>
+    <string name="absent">відсутній</string>
+
+    <string name="history">Історія:</string>
+    <string name="temperature">Температура:</string>
+    <string name="pressure">Тиск:</string>
+    <string name="humidity">Вологість повітря:</string>
+    <string name="wind">Вітер:</string>
+    <string name="precipitation">Опади:</string>
 </resources>
