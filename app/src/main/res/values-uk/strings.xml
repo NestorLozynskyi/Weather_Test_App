@@ -22,4 +22,9 @@
     <string name="absent">відсутній</string>
 
     <string name="history">Історія:</string>
+    <string name="temperature">Температура:</string>
+    <string name="pressure">Тиск:</string>
+    <string name="humidity">Вологість повітря:</string>
+    <string name="wind">Вітер:</string>
+    <string name="precipitation">Опади:</string>
 </resources>

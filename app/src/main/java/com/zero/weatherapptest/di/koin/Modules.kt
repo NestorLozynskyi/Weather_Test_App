@@ -42,29 +42,13 @@ val retrofitModule = module(override = true) {
 
 val viewModelModule = module {
     viewModel { ProfileViewModel(get(), get(), get()) }
-    viewModel { SearchViewModel(get(), get()) }
+    viewModel { SearchViewModel(get(), get(), get()) }
     viewModel { StatisticViewModel(get()) }
 }
-
-/*val navigationModule = module {
-   // factory { ProfileNavigation() }
-    factory { SearchNavigation() }
-    factory { StatisticNavigation() }
-}*/
 
 val repositoryModule = module {
     factory { GeneralRepository(get(), get()) }
 }
-
-/*val networkModule = module {
-
-    fun provideGson() = GsonBuilder()
-        .setLenient()
-        .serializeSpecialFloatingPointValues()
-        .serializeNulls().create()
-
-    single { provideGson() }
-}*/
 
 val sharedPrefModule = module {
 
@@ -74,7 +58,6 @@ val sharedPrefModule = module {
 }
 
 val dataBaseModule = module {
-    //single { BaseDB.getInstance(androidContext()).historyDao }
     fun provideDataBase(context: Context): BaseDB {
         return Room.databaseBuilder(context, BaseDB::class.java, "database")
             .fallbackToDestructiveMigration()
@@ -89,24 +72,3 @@ val dataBaseModule = module {
     single { provideDataBase(get()) }
     single { provideDao(get()) }
 }
-    /*fun provideDataBase(context: Context): BaseDB {
-        return Room.databaseBuilder(context, BaseDB::class.java, "database")
-            .fallbackToDestructiveMigration()
-            .setQueryExecutor{ }
-            .build()
-    }
-
-    fun provideDao(dataBase: BaseDB): HistoryDao? {
-        return dataBase.historyDao()
-    }
-
-    single { provideDataBase(get()) }
-    single { provideDao(get()) }*/
-
-
-
-    /*fun db(context: Context): BaseDB = Room.databaseBuilder(
-        context,
-        BaseDB::class.java, "database"
-    ).build()*/
-    //single { StatisticDataBase() }

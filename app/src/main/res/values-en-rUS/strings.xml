@@ -21,4 +21,9 @@
     <string name="no_data">no data</string>
     <string name="absent">absent</string>
     <string name="history">History:</string>
+    <string name="temperature">Temperature:</string>
+    <string name="pressure">Pressure:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="wind">Wind:</string>
+    <string name="precipitation">Precipitation:</string>
 </resources>

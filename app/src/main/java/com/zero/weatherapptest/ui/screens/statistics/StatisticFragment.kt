@@ -5,26 +5,19 @@ import android.view.ViewGroup
 import com.zero.weatherapptest.R
 import com.zero.weatherapptest.base.BaseFragment
 import com.zero.weatherapptest.base.baseExtensions.observeLiveData
-import com.zero.weatherapptest.data.objects.*
 import com.zero.weatherapptest.databinding.ScreenStatisticBinding
 import com.zero.weatherapptest.ui.screens.generals.generalsAdapters.CityAdapter
 import com.zero.weatherapptest.utils.extensions.visible
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class StatisticFragment: BaseFragment<ScreenStatisticBinding>() {
     override val viewModel: StatisticViewModel by viewModel()
-
-    private val historyMy = History()
 
     private lateinit var cityAdapter: CityAdapter
 
     override fun onCreate(i: LayoutInflater, c: ViewGroup?) = ScreenStatisticBinding.inflate(i,c, false)
 
     override fun initialize() {
-
-        historyMy.cityName = "Test"
 
         with(binding){
 

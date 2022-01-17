@@ -22,7 +22,6 @@ class SearchFragment() : BaseFragment<ScreenSearchBinding>() {
 
     override fun initialize() {
 
-
         with(binding){
             search.setOnClickListener {
                 rvGone()
@@ -32,8 +31,8 @@ class SearchFragment() : BaseFragment<ScreenSearchBinding>() {
             cityAdapter = CityAdapter {
                 viewWeatherInfo.tvCityName.text =
                     when {
-                        it.components.city.isNullOrBlank() -> it.components.city
-                        it.components.village.isNullOrBlank() -> it.components.village
+                        !it.components.city.isNullOrBlank() -> it.components.city
+                        !it.components.village.isNullOrBlank() -> it.components.village
                         else -> it.components.state
                     }
 
@@ -81,6 +80,9 @@ class SearchFragment() : BaseFragment<ScreenSearchBinding>() {
                         }
                     }
                 }
+            }
+            observeLiveData(ldSetCity){
+                binding.viewWeatherInfo.tvCityName.text = it
             }
         }
     }

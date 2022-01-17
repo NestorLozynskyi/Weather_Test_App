@@ -22,14 +22,4 @@ class CoroutineHelper(private val scope: CoroutineScope) {
             scope.launch(Dispatchers.Main) { onError(exception) }
         }
     }
-
-
-    /*fun startTimer(timer: Int, block: suspend CoroutineScope.(timerResponse: TimerResult) -> Unit) {
-        scope.launch {
-            repeat(timer + 1) {
-                block(TimerResult(timer, timer - it, it >= timer))
-                delay(1_000)
-            }
-        }
-    }*/
 }

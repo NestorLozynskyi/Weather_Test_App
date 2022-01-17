@@ -49,8 +49,6 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
     }
 
     private fun observeError() {
-        /*   viewModel.error.observe(viewLifecycleOwner, Observer {
-           })*/
     }
 
     protected open fun observe() {}
@@ -58,11 +56,6 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         navigator.attach(requireActivity())
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        //binding = null //todo did need delete?
     }
 
     override fun onDestroy() {

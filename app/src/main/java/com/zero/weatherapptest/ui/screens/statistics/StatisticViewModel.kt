@@ -9,14 +9,12 @@ import com.zero.weatherapptest.data.objects.CoordinatesCR
 import kotlinx.coroutines.Job
 
 class StatisticViewModel(
-    //private val sharedManager: SharedManager,
     private val historyDao: HistoryDao
 ): BaseViewModel() {
 
     val ldHistory = MutableLiveData<ArrayList<CityData>>()
 
     private var getHistoryJob: Job? = null
-    //private var delHistoryJob: Job? = null
 
     init {
         getHistoryJob = launch(::onErrorHandler) {
@@ -40,26 +38,7 @@ class StatisticViewModel(
                     )
                 }
             }
-           // val historyData = historyDao.all
             ldHistory.postValue(cityDataList)
         }
     }
-
-    //fun getAll() {}
-
-   /*fun add(userAdd: History) {
-        addHistoryJob = launch(::onErrorHandler) {
-            historyDao.insert(userAdd)
-        }
-    }*/
-
-    /*fun updateUser(id: Int, updateName: String, updateDesignation: String) {
-        historyDao.updateUser(id, updateName, updateDesignation)
-    }*/
-//todo del
-    /*fun delete(userDelete: History) {
-        delHistoryJob = launch(::onErrorHandler) {
-            historyDao.delete(userDelete)
-        }
-    }*/
 }

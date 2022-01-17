@@ -6,13 +6,8 @@ data class CityResponse(
     val results: ArrayList<CityData>
 )
 data class CityData(
-    //val bounds: BoundsCR,
     val components: ComponentsCR,
     val geometry: CoordinatesCR
-)
-data class BoundsCR(
-    val northeast: CoordinatesCR,
-    val southwest: CoordinatesCR
 )
 data class CoordinatesCR(
     val lat: Float,

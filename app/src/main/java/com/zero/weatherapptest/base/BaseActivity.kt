@@ -28,8 +28,4 @@ abstract class BaseActivity(@LayoutRes private val layoutId: Int) : AppCompatAct
     }
 
     abstract fun backPressed(): Boolean
-
-    override fun onResume() {
-        super.onResume()
-    }
 }

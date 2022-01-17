@@ -22,4 +22,9 @@
     <string name="absent">nieobecny</string>
 
     <string name="history">Historia:</string>
+    <string name="temperature">Temperatura:</string>
+    <string name="pressure">Ciśnienie:</string>
+    <string name="humidity">Wilgotność:</string>
+    <string name="wind">Wiatr:</string>
+    <string name="precipitation">Opad atmosferyczny:</string>
 </resources>
