@@ -5,6 +5,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import com.zero.weatherapptest.base.baseExtensions.exitVariant
 import com.zero.weatherapptest.base.baseExtensions.finishFragment
+import java.lang.Exception
 
 abstract class BaseActivity(@LayoutRes private val layoutId: Int) : AppCompatActivity() {
 

@@ -3,7 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/profileFragment">
+    app:startDestination="@id/searchFragment">
+
+    <action
+        android:id="@+id/onCreate"
+        app:destination="@id/searchFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/main_navigation"
+        app:popUpToInclusive="true" />
 
     <fragment
         android:id="@+id/searchFragment"
@@ -12,7 +19,7 @@
         tools:layout="@layout/screen_search">
 
         <action
-            android:id="@+id/action_pinFragment_to_bottomTabNavigator"
+            android:id="@+id/action_SearchFragment_to_ProfileFragment"
             app:destination="@id/profileFragment"
             app:launchSingleTop="true"
             app:popUpTo="@+id/main_navigation"
@@ -23,12 +30,35 @@
         android:id="@+id/profileFragment"
         android:name="com.zero.weatherapptest.ui.screens.profile.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/screen_profile"/>
+        tools:layout="@layout/screen_profile">
 
-    <action
-        android:id="@+id/onCreate"
-        app:destination="@id/profileFragment"
-        app:launchSingleTop="true"
-        app:popUpTo="@id/main_navigation"
-        app:popUpToInclusive="true" />
+            <action android:id="@+id/action_profileFragment_to_searchFragment"
+            app:destination="@id/searchFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/statisticFragment"
+        android:name="com.zero.weatherapptest.ui.screens.statistics.StatisticFragment"
+        android:label="StatisticFragment"
+        tools:layout="@layout/screen_statistic">
+
+    </fragment>
+
+    <action android:id="@+id/action_to_SearchFragment"
+        app:destination="@+id/searchFragment"
+        app:enterAnim="@anim/from_left"
+        app:exitAnim="@anim/to_right"/>
+    <action android:id="@+id/action_to_ProfileFragment_fromLeft"
+        app:destination="@+id/profileFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"/>
+    <action android:id="@+id/action_to_ProfileFragment_fromRight"
+        app:destination="@+id/profileFragment"
+        app:enterAnim="@anim/from_left"
+        app:exitAnim="@anim/to_right"/>
+    <action android:id="@+id/action_to_StatisticFragment"
+        app:destination="@+id/statisticFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"/>
+
 </navigation>

@@ -3,6 +3,8 @@ package com.zero.weatherapptest.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.zero.weatherapptest.api.CityApiInterface
+import com.zero.weatherapptest.data.constants.Constants
 import com.zero.weatherapptest.utils.coroutine.CoroutineHelper
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,4 +33,8 @@ abstract class BaseViewModel : ViewModel() {
     open fun onErrorHandler(throwable: Throwable) {
 
     }
+
+   /* private val api = RetrofitClient
+        .getRetrofit(Constants.CITY_URL, context)
+        .create(CityApiInterface::class.java)*/
 }

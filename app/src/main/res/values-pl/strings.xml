@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="language">pl</string>
+    <string name="lang">pl</string>
     <string name="country">def</string>
 
     <string name="app_name">Pogoda</string>
@@ -9,4 +9,17 @@
     <string name="profile_city">Wybierz swoje miasto</string>
     <string name="profile_theme">Wybierz temat</string>
     <string name="profile_enter_city">Napisz miasto</string>
+
+    <string name="city">miasto %s</string>
+    <string name="village">wieś %s</string>
+    <string name="not_a_settlement">(nie miejscowość)</string>
+    <string name="language">język</string>
+    <string name="select_a_language">Wybierz język</string>
+
+    <string name="lang_def">(domyślna) polski</string>
+
+    <string name="no_data">brak danych</string>
+    <string name="absent">nieobecny</string>
+
+    <string name="history">Historia:</string>
 </resources>

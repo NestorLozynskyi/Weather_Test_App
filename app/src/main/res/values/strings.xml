@@ -1,11 +1,27 @@
 <resources>
-    <string name="language">def</string>
+    <string name="lang">def</string>
     <string name="country">def</string>
 
     <string name="app_name">Weather (Test App)</string>
     <string name="back_again">Click again to exit</string>
 
-    <string name="profile_city">Choose your city</string>
-    <string name="profile_theme">Choose a theme</string>
+    <string name="profile_city">Select your city</string>
+    <string name="profile_theme">Select a theme</string>
     <string name="profile_enter_city">Enter the city</string>
+
+    <string name="city">city %s</string>
+    <string name="village">village %s</string>
+    <string name="not_a_settlement">(not a settlement)</string>
+    <string name="language">language</string>
+    <string name="select_a_language">Select a language</string>
+
+    <string name="lang_def">(default) English</string>
+    <string name="lang_ua_native" translatable="false">українська</string>
+    <string name="lang_en_native" translatable="false">English</string>
+    <string name="lang_pl_native" translatable="false">polski</string>
+    <string name="lang_ru_native" translatable="false">русский</string>
+
+    <string name="no_data">no data</string>
+    <string name="absent">absent</string>
+    <string name="history">History:</string>
 </resources>

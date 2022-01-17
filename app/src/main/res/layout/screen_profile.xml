@@ -7,65 +7,133 @@
     android:background="@color/white">
 
     <TextView
+        android:id="@+id/city_title"
         android:layout_width="match_parent"
-        android:layout_height="37dp"
+        android:layout_height="0dp"
         android:layout_marginTop="36dp"
         android:text="@string/profile_city"
         android:textSize="25sp"
         android:textStyle="italic|bold"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/theme_white"
-        android:layout_width="75dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="304dp"
-        android:background="#EBEAAE"
+    <EditText
+        android:id="@+id/et_enter_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/profile_enter_city"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/search"
+        app:layout_constraintTop_toBottomOf="@+id/city_title"/>
 
-    <TextView
-        android:id="@+id/theme_black"
-        android:layout_width="75dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="96dp"
-        android:background="#74735B"
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="52dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="1dp"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintStart_toEndOf="@id/et_enter_city"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/et_enter_city"/>
 
     <TextView
+        android:id="@+id/theme_title"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/profile_theme"
         android:textSize="25sp"
         android:textStyle="italic|bold"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/et_enter_city"/>
 
-    <EditText
-        android:id="@+id/etEnterCity"
-        android:layout_width="232dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="120dp"
-        android:hint="@string/profile_enter_city"
-        android:inputType="text"
+    <TextView
+        android:id="@+id/theme_white"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="#EBEAAE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/theme_black"
+        app:layout_constraintTop_toBottomOf="@+id/theme_title"/>
+
+    <TextView
+        android:id="@+id/theme_black"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#74735B"
+        app:layout_constraintStart_toEndOf="@+id/theme_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/theme_white"
+        app:layout_constraintBottom_toBottomOf="@+id/theme_white"/>
+
+    <TextView
+        android:id="@+id/language_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/select_a_language"
         android:textSize="25sp"
         android:textStyle="italic|bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/theme_white"/>
 
-    <ImageView
-        android:id="@+id/find"
-        android:layout_width="52dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="1dp"
-        android:src="@drawable/ic_baseline_search_24"
-        app:layout_constraintStart_toEndOf="@id/etEnterCity"
-        app:layout_constraintTop_toTopOf="@id/etEnterCity" />
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/language_title"/>
+
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bar_bottom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLanguage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="1"
+        tools:itemCount="2"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/language"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_language_list"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_city"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="1"
+        tools:itemCount="1"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/et_enter_city"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_city_list" />
 </androidx.constraintlayout.widget.ConstraintLayout>
